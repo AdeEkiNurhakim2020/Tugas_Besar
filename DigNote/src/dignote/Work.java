@@ -41,8 +41,6 @@ public class Work extends javax.swing.JFrame {
 
         atasPanel.setBackground(new java.awt.Color(0, 0, 255));
 
-        logoLabel.setIcon(new javax.swing.ImageIcon("C:\\Users\\Ade Eki Nurhakim\\Pictures\\Untitled-2.png")); // NOI18N
-
         txtMenuUtamaLabel.setFont(new java.awt.Font("Eras Demi ITC", 1, 18)); // NOI18N
         txtMenuUtamaLabel.setForeground(new java.awt.Color(255, 255, 255));
         txtMenuUtamaLabel.setText("Work");
@@ -62,7 +60,7 @@ public class Work extends javax.swing.JFrame {
             atasPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, atasPanelLayout.createSequentialGroup()
                 .addComponent(logoLabel)
-                .addGap(0, 8, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(atasPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(txtMenuUtamaLabel)
