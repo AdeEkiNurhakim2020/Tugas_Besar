@@ -3,19 +3,33 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package dignote;
 
+package dignote;
+import java.sql.Connection; 
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+class Koneksi{
+    Connection con;
+    public Connection getConnect() throws SQLException{
+        String url = "jdbc:mysql://localhost:127.0.0.1/work";
+        String user = "root";
+        String pass = "";
+        try {
+            con = DriverManager.getConnection(url, user, pass);
+        }   catch(Exception e) {
+        }
+        return con;
+    }
+}
 /**
  *
  * @author Ade Eki Nurhakim
  */
 public class DigNote {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+    public static void main(String[] args) throws SQLException {
+        new Koneksi().getConnect();
+        
     }
     
 }

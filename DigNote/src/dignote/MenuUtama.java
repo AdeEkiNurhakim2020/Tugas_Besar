@@ -30,16 +30,15 @@ public class MenuUtama extends javax.swing.JFrame {
         atasPanel = new javax.swing.JPanel();
         logoLabel = new javax.swing.JLabel();
         txtMenuUtamaLabel = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         sampingPanel = new javax.swing.JPanel();
-        g_kalkulatorLabel = new javax.swing.JLabel();
-        g_gameLabel = new javax.swing.JLabel();
-        txtKalkulatorLabel = new javax.swing.JLabel();
-        txtGameLabel = new javax.swing.JLabel();
+        btnkalkulator = new javax.swing.JButton();
+        btngame = new javax.swing.JButton();
         bawahPanel = new javax.swing.JPanel();
-        g_noteLabel = new javax.swing.JLabel();
-        g_workLabel = new javax.swing.JLabel();
         txtCatatanLabel = new javax.swing.JLabel();
         txtWorkLabel = new javax.swing.JLabel();
+        btncatatan = new javax.swing.JButton();
+        btnwork = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("MenuUtama");
@@ -47,11 +46,11 @@ public class MenuUtama extends javax.swing.JFrame {
 
         atasPanel.setBackground(new java.awt.Color(0, 0, 255));
 
-        logoLabel.setIcon(new javax.swing.ImageIcon("C:\\Users\\Ade Eki Nurhakim\\Pictures\\Untitled-2.png")); // NOI18N
-
         txtMenuUtamaLabel.setFont(new java.awt.Font("Eras Demi ITC", 1, 18)); // NOI18N
         txtMenuUtamaLabel.setForeground(new java.awt.Color(255, 255, 255));
         txtMenuUtamaLabel.setText("Menu Utama");
+
+        jLabel1.setIcon(new javax.swing.ImageIcon("E:\\Tugas Besar\\Bahan\\icon_logo.png")); // NOI18N
 
         javax.swing.GroupLayout atasPanelLayout = new javax.swing.GroupLayout(atasPanel);
         atasPanel.setLayout(atasPanelLayout);
@@ -60,14 +59,20 @@ public class MenuUtama extends javax.swing.JFrame {
             .addGroup(atasPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(logoLabel)
-                .addGap(125, 125, 125)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel1)
+                .addGap(18, 18, 18)
                 .addComponent(txtMenuUtamaLabel)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         atasPanelLayout.setVerticalGroup(
             atasPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, atasPanelLayout.createSequentialGroup()
-                .addComponent(logoLabel)
+            .addGroup(atasPanelLayout.createSequentialGroup()
+                .addGroup(atasPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel1)
+                    .addGroup(atasPanelLayout.createSequentialGroup()
+                        .addComponent(logoLabel)
+                        .addGap(28, 28, 28)))
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(atasPanelLayout.createSequentialGroup()
                 .addContainerGap()
@@ -78,42 +83,34 @@ public class MenuUtama extends javax.swing.JFrame {
         sampingPanel.setBackground(new java.awt.Color(0, 0, 255));
         sampingPanel.setForeground(new java.awt.Color(0, 0, 255));
 
-        g_kalkulatorLabel.setIcon(new javax.swing.ImageIcon("E:\\Tugas Besar\\Bahan\\icon_kalkulator.png")); // NOI18N
+        btnkalkulator.setIcon(new javax.swing.ImageIcon("E:\\Tugas Besar\\Bahan\\icon_kalkulator.png")); // NOI18N
+        btnkalkulator.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnkalkulatorActionPerformed(evt);
+            }
+        });
 
-        g_gameLabel.setIcon(new javax.swing.ImageIcon("E:\\Tugas Besar\\Bahan\\icon_game.png")); // NOI18N
-
-        txtKalkulatorLabel.setFont(new java.awt.Font("Eras Demi ITC", 1, 12)); // NOI18N
-        txtKalkulatorLabel.setForeground(new java.awt.Color(255, 255, 255));
-        txtKalkulatorLabel.setText("Kalkulator");
-
-        txtGameLabel.setFont(new java.awt.Font("Eras Demi ITC", 1, 12)); // NOI18N
-        txtGameLabel.setForeground(new java.awt.Color(255, 255, 255));
-        txtGameLabel.setText("Game");
+        btngame.setIcon(new javax.swing.ImageIcon("E:\\Tugas Besar\\Bahan\\icon_game.png")); // NOI18N
 
         javax.swing.GroupLayout sampingPanelLayout = new javax.swing.GroupLayout(sampingPanel);
         sampingPanel.setLayout(sampingPanelLayout);
         sampingPanelLayout.setHorizontalGroup(
             sampingPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txtKalkulatorLabel)
             .addGroup(sampingPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(sampingPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(g_kalkulatorLabel)
-                    .addComponent(g_gameLabel)
-                    .addComponent(txtGameLabel)))
+                    .addComponent(btngame, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnkalkulator, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(16, 16, 16))
         );
         sampingPanelLayout.setVerticalGroup(
             sampingPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(sampingPanelLayout.createSequentialGroup()
-                .addGap(61, 61, 61)
-                .addComponent(g_kalkulatorLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtKalkulatorLabel)
-                .addGap(18, 18, 18)
-                .addComponent(g_gameLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtGameLabel)
-                .addContainerGap(88, Short.MAX_VALUE))
+                .addGap(111, 111, 111)
+                .addComponent(btnkalkulator, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28)
+                .addComponent(btngame, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(108, Short.MAX_VALUE))
         );
 
         bawahPanel.setBackground(new java.awt.Color(0, 0, 255));
@@ -129,10 +126,6 @@ public class MenuUtama extends javax.swing.JFrame {
             .addGap(0, 33, Short.MAX_VALUE)
         );
 
-        g_noteLabel.setIcon(new javax.swing.ImageIcon("E:\\Tugas Besar\\Bahan\\icon_note.png")); // NOI18N
-
-        g_workLabel.setIcon(new javax.swing.ImageIcon("E:\\Tugas Besar\\Bahan\\icon_work.png")); // NOI18N
-
         txtCatatanLabel.setFont(new java.awt.Font("Eras Demi ITC", 1, 18)); // NOI18N
         txtCatatanLabel.setForeground(new java.awt.Color(0, 0, 255));
         txtCatatanLabel.setText("Catatan");
@@ -140,6 +133,20 @@ public class MenuUtama extends javax.swing.JFrame {
         txtWorkLabel.setFont(new java.awt.Font("Eras Demi ITC", 1, 18)); // NOI18N
         txtWorkLabel.setForeground(new java.awt.Color(255, 255, 51));
         txtWorkLabel.setText("Pekerjaan");
+
+        btncatatan.setIcon(new javax.swing.ImageIcon("E:\\Tugas Besar\\Bahan\\icon_note.png")); // NOI18N
+        btncatatan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btncatatanActionPerformed(evt);
+            }
+        });
+
+        btnwork.setIcon(new javax.swing.ImageIcon("E:\\Tugas Besar\\Bahan\\icon_work.png")); // NOI18N
+        btnwork.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnworkActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -149,17 +156,20 @@ public class MenuUtama extends javax.swing.JFrame {
             .addComponent(bawahPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(sampingPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(77, 77, 77)
+                .addGap(87, 87, 87)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(g_noteLabel)
+                    .addComponent(btncatatan)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
+                        .addGap(31, 31, 31)
                         .addComponent(txtCatatanLabel)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 102, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(g_workLabel)
-                    .addComponent(txtWorkLabel))
-                .addGap(56, 56, 56))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(btnwork)
+                        .addGap(72, 72, 72))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(txtWorkLabel)
+                        .addGap(91, 91, 91))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -167,24 +177,41 @@ public class MenuUtama extends javax.swing.JFrame {
                 .addComponent(atasPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(70, 70, 70)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(g_noteLabel)
-                            .addComponent(g_workLabel))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtCatatanLabel)
-                            .addComponent(txtWorkLabel))
-                        .addGap(90, 90, 90))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(sampingPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                        .addComponent(sampingPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(79, 79, 79)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnwork)
+                            .addComponent(btncatatan))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtCatatanLabel)
+                            .addComponent(txtWorkLabel))))
+                .addGap(13, 13, 13)
                 .addComponent(bawahPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnkalkulatorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnkalkulatorActionPerformed
+        // TODO add your handling code here:
+        this.dispose();
+        new Kalkulator().setVisible(true);
+    }//GEN-LAST:event_btnkalkulatorActionPerformed
+
+    private void btncatatanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncatatanActionPerformed
+        // TODO add your handling code here:
+        this.dispose();
+        new Notepad().setVisible(true);
+    }//GEN-LAST:event_btncatatanActionPerformed
+
+    private void btnworkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnworkActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_btnworkActionPerformed
 
     /**
      * @param args the command line arguments
@@ -224,15 +251,14 @@ public class MenuUtama extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel atasPanel;
     private javax.swing.JPanel bawahPanel;
-    private javax.swing.JLabel g_gameLabel;
-    private javax.swing.JLabel g_kalkulatorLabel;
-    private javax.swing.JLabel g_noteLabel;
-    private javax.swing.JLabel g_workLabel;
+    private javax.swing.JButton btncatatan;
+    private javax.swing.JButton btngame;
+    private javax.swing.JButton btnkalkulator;
+    private javax.swing.JButton btnwork;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel logoLabel;
     private javax.swing.JPanel sampingPanel;
     private javax.swing.JLabel txtCatatanLabel;
-    private javax.swing.JLabel txtGameLabel;
-    private javax.swing.JLabel txtKalkulatorLabel;
     private javax.swing.JLabel txtMenuUtamaLabel;
     private javax.swing.JLabel txtWorkLabel;
     // End of variables declaration//GEN-END:variables

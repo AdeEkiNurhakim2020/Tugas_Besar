@@ -36,8 +36,13 @@ public class Register extends javax.swing.JFrame {
         regsterPanel.setBackground(new java.awt.Color(0, 255, 255));
 
         startButton.setBackground(new java.awt.Color(0, 0, 255));
-        startButton.setForeground(new java.awt.Color(255, 255, 255));
-        startButton.setText("Start");
+        startButton.setForeground(new java.awt.Color(255, 0, 0));
+        startButton.setText("Masuk");
+        startButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                startButtonActionPerformed(evt);
+            }
+        });
 
         g_logoLabel.setIcon(new javax.swing.ImageIcon("E:\\Tugas Besar\\Bahan\\Logos.png")); // NOI18N
 
@@ -46,21 +51,21 @@ public class Register extends javax.swing.JFrame {
         regsterPanelLayout.setHorizontalGroup(
             regsterPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(regsterPanelLayout.createSequentialGroup()
-                .addContainerGap(132, Short.MAX_VALUE)
                 .addGroup(regsterPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, regsterPanelLayout.createSequentialGroup()
-                        .addComponent(startButton)
-                        .addGap(139, 139, 139))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, regsterPanelLayout.createSequentialGroup()
-                        .addComponent(g_logoLabel)
-                        .addGap(98, 98, 98))))
+                    .addGroup(regsterPanelLayout.createSequentialGroup()
+                        .addGap(102, 102, 102)
+                        .addComponent(g_logoLabel))
+                    .addGroup(regsterPanelLayout.createSequentialGroup()
+                        .addGap(146, 146, 146)
+                        .addComponent(startButton)))
+                .addContainerGap(128, Short.MAX_VALUE))
         );
         regsterPanelLayout.setVerticalGroup(
             regsterPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(regsterPanelLayout.createSequentialGroup()
-                .addGap(65, 65, 65)
+                .addGap(53, 53, 53)
                 .addComponent(g_logoLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addComponent(startButton)
                 .addContainerGap(67, Short.MAX_VALUE))
         );
@@ -79,7 +84,14 @@ public class Register extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void startButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_startButtonActionPerformed
+        // TODO add your handling code here:
+        this.dispose();
+        new MenuUtama().setVisible(true);
+    }//GEN-LAST:event_startButtonActionPerformed
 
     /**
      * @param args the command line arguments
